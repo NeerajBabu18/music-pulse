@@ -24,11 +24,10 @@ for artist_ in artists:
     
     try:
         response = requests.get(f"{api_root_url}/?method=artist.getTopTags&api_key={last_fm_key}&artist={artist}&format=json")
-        time.sleep(0.2)
     except requests.exceptions.RequestException as err:
         print(f"An unexpected error occurred: {err}")
         continue 
-    
+    time.sleep(0.2)
     data = response.json()
     if "error" in data.keys():
         print(f"Errored out due to error code {data["error"]}: {data["message"]}")

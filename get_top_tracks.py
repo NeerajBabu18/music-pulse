@@ -23,12 +23,12 @@ countries = [
 ]
 
 cleaned_tracks = []
-deduped_tracks_ = []
+deduped_artists_ = []
 
 for country in countries:
     print(country)
     try:
-        response = requests.get(f"{api_root_url}/?method=geo.gettoptracks&country={country}&api_key={last_fm_key}&format=json&limit=5&page=1")
+        response = requests.get(f"{api_root_url}/?method=geo.gettoptracks&country={country}&api_key={last_fm_key}&format=json&limit=50&page=1")
     except requests.exceptions.RequestException as err:
         print(f"An unexpected error occurred: {err}")
         continue
@@ -53,15 +53,15 @@ for country in countries:
                             "position":position,
                             "country":country
                             })
-        deduped_tracks_.append({"artist_name":artist_name,
-                            "track_name":track_name})
+        deduped_artists_.append({"artist_name":artist_name})
     
     print("Finished",country)
-deduped_tracks = [dict(t) for t in {tuple(d.items()) for d in deduped_tracks_}]
+    
+deduped_artists = [dict(t) for t in {tuple(d.items()) for d in deduped_artists_}]
 
 
-with open("deduped_tracks.json", "w") as f:
-    json.dump(deduped_tracks, f)
+with open("deduped_artists.json", "w") as f:
+    json.dump(deduped_artists, f)
     
 
 with open("all_tracks.json", "w") as f:

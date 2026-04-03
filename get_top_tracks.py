@@ -9,28 +9,60 @@ last_fm_key = os.getenv("LASTFM_API_KEY")
 
 api_root_url = 'http://ws.audioscrobbler.com/2.0'
 
-country = 'India'
-
-response = requests.get(f"{api_root_url}/?method=geo.gettoptracks&country={country}&api_key={last_fm_key}&format=json&limit=5&page=1")
-
-tracks_dict = response.json()
-
-tracks = tracks_dict["tracks"]["track"]
+countries = [
+    "India",
+    "China",
+    "United States",
+    "Indonesia",
+    "Pakistan",
+    "Nigeria",
+    "Brazil",
+    "Bangladesh",
+    "Russian Federation",
+    "Mexico"
+]
 
 cleaned_tracks = []
+deduped_tracks_ = []
 
-for track in tracks:
-    track_name = track["name"]
-    duration = track["duration"]
-    listeners = track["listeners"]
-    position = track["@attr"]["rank"]
-    artist_name = track["artist"]["name"]
-    cleaned_tracks.append({"track_name":track_name,
-                         "duration": duration,
-                         "artist_name":artist_name,
-                         "listeners":listeners,
-                         "position":position,
-                         "country":country
-                         })
+for country in countries:
+    print(country)
+    try:
+        response = requests.get(f"{api_root_url}/?method=geo.gettoptracks&country={country}&api_key={last_fm_key}&format=json&limit=5&page=1")
+    except requests.exceptions.RequestException as err:
+        print(f"An unexpected error occurred: {err}")
+        continue
+    tracks_dict = response.json()
+    
+    if "error" in tracks_dict.keys():
+        print(f"Errored out due to error code {tracks_dict["error"]}: {tracks_dict["message"]}")
+        continue
+  
+    tracks = tracks_dict["tracks"]["track"]
+    
+    for track in tracks:
+        track_name = track["name"]
+        duration = track["duration"]
+        listeners = track["listeners"]
+        position = track["@attr"]["rank"]
+        artist_name = track["artist"]["name"]
+        cleaned_tracks.append({"track_name":track_name,
+                            "duration": duration,
+                            "artist_name":artist_name,
+                            "listeners":listeners,
+                            "position":position,
+                            "country":country
+                            })
+        deduped_tracks_.append({"artist_name":artist_name,
+                            "track_name":track_name})
+    
+    print("Finished",country)
+deduped_tracks = [dict(t) for t in {tuple(d.items()) for d in deduped_tracks_}]
 
-print(cleaned_tracks)
+
+with open("deduped_tracks.json", "w") as f:
+    json.dump(deduped_tracks, f)
+    
+
+with open("all_tracks.json", "w") as f:
+    json.dump(cleaned_tracks, f)

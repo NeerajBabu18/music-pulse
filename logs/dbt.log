@@ -1,0 +1,93 @@
+[0m13:19:46.116644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111ea62d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112685ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112685940>]}
+
+
+============================== 13:19:46.119866 | 308be5c6-b656-48d4-8528-c3413bfc3e5c ==============================
+[0m13:19:46.119866 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:19:46.120196 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'empty': 'None', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'static_parser': 'True', 'warn_error': 'None', 'invocation_command': 'dbt init music_pulse', 'partial_parse': 'True', 'log_path': 'logs', 'quiet': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'write_json': 'True', 'introspect': 'True', 'profiles_dir': '/Users/neerajbabu/.dbt', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'log_cache_events': 'False', 'version_check': 'True', 'indirect_selection': 'eager'}
+[0m13:19:46.129660 [info ] [MainThread]: Creating dbt configuration folder at /Users/neerajbabu/.dbt
+[0m13:19:46.130740 [debug] [MainThread]: Starter project path: /Users/neerajbabu/Desktop/music_pulse/venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m13:19:46.135552 [info ] [MainThread]: 
+Your new dbt project "music_pulse" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:19:46.135741 [info ] [MainThread]: Setting up your profile.
+[0m13:23:00.558809 [info ] [MainThread]: Profile music_pulse written to /Users/neerajbabu/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m13:23:00.669804 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 194.6043, "process_in_blocks": "0", "process_kernel_time": 0.412152, "process_mem_max_rss": "202752000", "process_out_blocks": "0", "process_user_time": 1.431234}
+[0m13:23:00.673937 [debug] [MainThread]: Command `dbt init` succeeded at 13:23:00.673747 after 194.61 seconds
+[0m13:23:00.675060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111f12d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x125e214c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117bdd820>]}
+[0m13:23:00.676202 [debug] [MainThread]: Flushing usage events
+[0m13:23:02.109938 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:23:24.545891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e5d790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077ddd30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077dd9a0>]}
+
+
+============================== 13:23:24.550973 | f0585c96-ee0e-4d25-956a-a87ad328bb13 ==============================
+[0m13:23:24.550973 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:23:24.551426 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Users/neerajbabu/.dbt', 'introspect': 'True', 'log_path': 'logs', 'empty': 'None', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'fail_fast': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'log_cache_events': 'False', 'invocation_command': 'dbt debug', 'version_check': 'True', 'write_json': 'True', 'static_parser': 'True', 'use_colors': 'True', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'quiet': 'False', 'cache_selected_only': 'False', 'no_print': 'None', 'target_path': 'None', 'warn_error': 'None'}
+[0m13:23:24.565011 [info ] [MainThread]: dbt version: 1.11.7
+[0m13:23:24.565667 [info ] [MainThread]: python version: 3.12.1
+[0m13:23:24.565978 [info ] [MainThread]: python path: /Users/neerajbabu/Desktop/music_pulse/venv/bin/python3.12
+[0m13:23:24.566186 [info ] [MainThread]: os info: macOS-26.3.1-arm64-arm-64bit
+[0m13:23:25.891694 [info ] [MainThread]: Using profiles dir at /Users/neerajbabu/.dbt
+[0m13:23:25.892015 [info ] [MainThread]: Using profiles.yml file at /Users/neerajbabu/.dbt/profiles.yml
+[0m13:23:25.892182 [info ] [MainThread]: Using dbt_project.yml file at /Users/neerajbabu/Desktop/music_pulse/dbt_project.yml
+[0m13:23:25.892331 [info ] [MainThread]: adapter type: bigquery
+[0m13:23:25.892466 [info ] [MainThread]: adapter version: 1.11.1
+[0m13:23:25.892607 [info ] [MainThread]: Configuration:
+[0m13:23:25.892735 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:23:25.892861 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m13:23:25.892986 [info ] [MainThread]: Required dependencies:
+[0m13:23:25.893163 [debug] [MainThread]: Executing "git --help"
+[0m13:23:25.902036 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:23:25.902570 [debug] [MainThread]: STDERR: "b''"
+[0m13:23:25.903028 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:23:25.903186 [info ] [MainThread]: Connection:
+[0m13:23:25.903356 [info ] [MainThread]:   method: service-account
+[0m13:23:25.903487 [info ] [MainThread]:   database: music-pulse-492116
+[0m13:23:25.903610 [info ] [MainThread]:   execution_project: music-pulse-492116
+[0m13:23:25.903733 [info ] [MainThread]:   schema: transformed
+[0m13:23:25.903850 [info ] [MainThread]:   location: US
+[0m13:23:25.903966 [info ] [MainThread]:   priority: interactive
+[0m13:23:25.904095 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m13:23:25.904218 [info ] [MainThread]:   impersonate_service_account: None
+[0m13:23:25.904337 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m13:23:25.904455 [info ] [MainThread]:   job_retries: 1
+[0m13:23:25.904575 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m13:23:25.904699 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m13:23:25.904823 [info ] [MainThread]:   timeout_seconds: 300
+[0m13:23:25.904942 [info ] [MainThread]:   client_id: None
+[0m13:23:25.905062 [info ] [MainThread]:   token_uri: None
+[0m13:23:25.905185 [info ] [MainThread]:   compute_region: None
+[0m13:23:25.905305 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m13:23:25.905423 [info ] [MainThread]:   gcs_bucket: None
+[0m13:23:25.905540 [info ] [MainThread]:   dataproc_batch: None
+[0m13:23:25.905846 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m13:23:26.031559 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m13:23:26.031963 [debug] [MainThread]: On debug: select 1 as id
+[0m13:23:26.032206 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:23:27.687994 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=music-pulse-492116&j=bq:US:c1bec2bf-e43f-43b3-9dee-3a00ac8748bb&page=queryresults
+[0m13:23:28.133904 [debug] [MainThread]: SQL status: OK in 0.444 seconds
+[0m13:23:28.670854 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:23:28.671654 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:23:28.672088 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/neerajbabu/Desktop/music_pulse/dbt_project.yml> not found
+
+[0m13:23:28.679987 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 4.1815557, "process_in_blocks": "0", "process_kernel_time": 0.466647, "process_mem_max_rss": "215973888", "process_out_blocks": "0", "process_user_time": 1.643267}
+[0m13:23:28.680741 [debug] [MainThread]: Command `dbt debug` failed at 13:23:28.680578 after 4.18 seconds
+[0m13:23:28.681220 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:23:28.681701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077ddbe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e5d790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110c49460>]}
+[0m13:23:28.682232 [debug] [MainThread]: Flushing usage events
+[0m13:23:29.826979 [debug] [MainThread]: An error was encountered while trying to flush usage events

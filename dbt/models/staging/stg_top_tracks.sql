@@ -1,0 +1,1 @@
+SELECT * FROM `music-pulse-492116.raw.top_tracks_by_nation` WHERE tags IS NOT NULL

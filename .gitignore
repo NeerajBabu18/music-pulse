@@ -40,3 +40,7 @@ pythonenv/
 # Environment variables
 .env
 .venv
+
+# Data files
+*.json
+music-pulse.json

@@ -33,3 +33,5 @@ models:
   music_pulse:
     staging:
       +materialized: view
+    marts:
+      +materialized: table

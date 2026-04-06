@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_top_tracks
+    columns:
+      - name: track_name
+        tests:
+          - not_null
+      - name: artist_name
+        tests:
+          - not_null
+      - name: duration
+        tests:
+          - not_null
+      - name: country
+        tests:
+          - not_null
+      - name: tags
+        tests:
+          - not_null
